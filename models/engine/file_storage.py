@@ -14,8 +14,8 @@ class FileStorage():
         return self.__objects
     def new(self, obj):
         if obj:
-            new_key = obj.__class__.__name__ + '.' + obj.id
-            self.__objects[new_key] = obj
+            key = obj.__class__.__name__ + '.' + obj.id
+            self.__objects[key] = obj
     def save(self):
         to_json = {}
         if self.__objects is None or len(self.__objects) == 0:
